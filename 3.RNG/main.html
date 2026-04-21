@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generate</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        p{
+            font-size: 40px ;
+            margin:20px;
+        }
+
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            color: black;
+            margin:20px;
+            
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(179, 235, 123);
+        }
+    </style>
+</head>
+<body>
+
+    <h2> Random Number Generate</h2>
+    <p id = 'number'> </p>
+    <button onclick = "generate()"> Generate</button>
+    <button onclick = 'reset()''>Reset</button>
+    
+
+    <script>
+        count = 0
+        function generate(){
+            let randomNum = Math.floor(Math.random()*100) +1;
+            document.getElementById('number').innerText = randomNum;
+        }
+
+        function reset(){
+            count=0
+            document.getElementById("number").innerText = count
+        }
+    </script>
+    
+</body>
+</html>
